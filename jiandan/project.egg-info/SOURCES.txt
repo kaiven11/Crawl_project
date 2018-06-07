@@ -1,0 +1,15 @@
+setup.py
+jiandan/__init__.py
+jiandan/items.py
+jiandan/middlewares.py
+jiandan/pipelines.py
+jiandan/settings.py
+jiandan/spiders/__init__.py
+jiandan/spiders/jiandanspider.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
+utils/__init__.py
+utils/getlogger.py
