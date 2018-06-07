@@ -68,7 +68,7 @@
     2.打开cmd命令，进入项目根目录
       运行scrapyd-deploy(打包项目并部署)
     3.部署完成后，启动爬虫计划
-      curl http://xx.xx.xx.xx:6801/schedule.json -d project=jiandan -d spider=jiandanspider username:password #前面设置的用户名和密码
+      curl http://xx.xx.xx.xx:6801/schedule.json -d project=jiandan -d spider=jiandanspider -u username:password #前面设置的用户名和密码
       运行后，会有返回提示，成功为success ，同时包括jobid
     4.停止一个任务
       curl http://xx.xx.xx.xx:6801/cancel.json -d project=jiandan -d job= 8270364f9d9811e5adbf000c29a5d5be #上面的jobID
