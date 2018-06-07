@@ -6,22 +6,14 @@ import requests
 import  re
 from urllib import parse
 def decrator(fun):
+    '''define a decorator for inspect response'''
     def wrapper(*args,**kwargs):
         x=fun(*args, **kwargs)
         inspect_response()
         return  x
     return wrapper
 
-
-
-
-
-
-
-
-
 class WenzhangSpider(scrapy.Spider):
-
     name = 'wenzhang'
     allowed_domains = ['weixin.sougou.com']
     start_urls = ['http://weixin.sougou.com/']
@@ -77,8 +69,12 @@ class WenzhangSpider(scrapy.Spider):
 
 
     def parse_article(self, response):
+        
         '''
-        parse the url of the
+        This function parses a sample response.
+        @url http://jandan.net/ooxx
+        @returns requests 1 10
+        @scrapes image_urls
         '''
         item=WeixinItem()
         a = re.sub('<em>|</em>|<!--red_beg-->|<!--red_end-->', '', response.text)
